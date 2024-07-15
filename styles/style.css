@@ -97,6 +97,8 @@ a {
 }
 
 .article-preview__title {
+  margin: 0;
+  font-size: var(--fs-regular);
   font-weight: var(--fw-bold);
   letter-spacing: var(--tracking-tight);
   font-size: var(--fs-regular);
