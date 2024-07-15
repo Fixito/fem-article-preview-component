@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* colors */
+  /* neutral */
+  --clr-neutral-1: #9daec2;
+  --clr-neutral-2: #6e8098;
+  --clr-neutral-3: #48556a;
+
+  /* rest of colors */
+  --clr-white: #fff;
+  --clr-off-white: #ecf2f8;
+
+  /* typography */
+  --ff-body: 'Manrope', sans-serif;
+
+  --fs-sm: 0.8125rem;
+  --fs-regular: 1rem;
+  --fs-xl: 1.25rem;
+
+  --fw-medium: 500;
+  --fw-bold: 700;
+
+  /* rest of vars */
+  --rounded-lg: 0.625rem;
+  --tracking-tighter: 0.0075em;
+  --tracking-tight: 0.0125em;
+  --tracking-widest: 0.3125em;
+  --transition: all 0.3s linear;
+  --card-size: 45.625rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--clr-off-white);
+  color: var(--clr-neutral-3);
+  font-family: var(--ff-body);
+  font-size: var(--fs-regular);
+  font-weight: var(--fw-medium);
+  min-block-size: 100dvh;
+  display: grid;
+  place-items: center;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.img {
+  display: block;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.main-content {
+  padding-inline: 1.5rem;
+}
+
+.article-preview {
+  background-color: var(--clr-white);
+  border-radius: var(--rounded-lg);
+  overflow: hidden;
+}
+
+.article-preview__body {
+  padding: 2.25rem 2rem 1.25rem 2rem;
+}
+
+.article-preview__title {
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  font-size: var(--fs-regular);
+}
+
+.article-preview__description {
+  margin-block-start: 0.75rem;
+  letter-spacing: var(--tracking-tighter);
+  font-size: var(--fs-sm);
+}
+
+.article-preview__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 1.25rem 2rem;
+  font-size: var(--fs-sm);
+}
+
+.article-preview__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.article-preview__avatar {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+
+.article-preview__share-button,
+.article-preview__share-button--active {
+  width: 2rem;
+  cursor: pointer;
+  border: transparent;
+  background-color: var(--clr-off-white);
+  padding: 0.5625rem;
+  border-radius: 100%;
+}
+
+.article-preview__share-button:hover {
+  background-color: var(--clr-neutral-1);
+}
+
+.article-preview__share-button:hover
+  .article-preview__share-icon-path {
+  fill: var(--clr-white);
+}
+
+.article-preview__share-button--active {
+  background-color: var(--clr-neutral-2);
+}
+
+.article-preview__share-button--active
+  .article-preview__share-icon-path {
+  fill: var(--clr-white);
+}
+
+/* share popup */
+.article-preview__share-popup {
+  background-color: var(--clr-neutral-3);
+  padding: 1.375rem 2rem;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+}
+
+.show-popup {
+  display: flex;
+}
+
+.article-preview__share-icons-container {
+  display: flex;
+  align-items: center;
+  gap: 1.3125rem;
+}
+
+.article-preview__share-label {
+  color: var(--clr-neutral-1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+}
+
+.article-preview__social-icons {
+  display: flex;
+  align-content: center;
+  gap: 1rem;
+}
+
+.article-preview__social-icon {
+  color: var(--clr-white);
+  font-size: 1.2rem;
+}
+
+.article-preview__social-icon:hover {
+  opacity: 0.7;
+}
+
+@media screen and (min-width: 768px) {
+  .article-preview {
+    max-inline-size: var(--card-size);
+    display: flex;
+  }
+
+  .article-preview__image {
+    block-size: 100%;
+    min-inline-size: 285px;
+  }
+
+  .article-preview__body {
+    padding: 2rem 2.5rem 0.625rem 2.5rem;
+  }
+
+  .article-preview__title {
+    font-size: var(--fs-xl);
+  }
+
+  .article-preview__footer {
+    padding: 0.625rem 2.5rem 2rem 2.5rem;
+  }
+}

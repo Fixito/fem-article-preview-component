@@ -13,7 +13,20 @@
       href="./images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Article preview component</title>
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize -->
     <link rel="stylesheet" href="./styles/normalize.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- JS -->
+    <script type="module" src="./app.js"></script>
   </head>
   <body>
     <main class="main-content">
@@ -22,42 +35,105 @@
           <img
             src="./images/drawers.jpg"
             alt="Picture of a green drawer"
-            class="article-preview__image"
+            class="img article-preview__image"
           />
         </div>
-        <div class="article-preview__content">
-          <h3 class="article-preview__title">
-            Shift the overall look and feel by adding these wonderful
-            touches to furniture in your home
-          </h3>
-          <p class="article-preview__description">
-            Ever been in a room and felt like something was missing?
-            Perhaps it felt slightly bare and uninviting. I've got
-            some simple tips to help you make any room feel complete.
-          </p>
-        </div>
-        <div class="article-preview__footer">
-          <img
-            src="./images/avatar-michelle.jpg"
-            alt="Michelle Appleton"
-            class="article-preview__avatar"
-          />
-          <div class="article-preview__author-info">
-            <h3 class="article-preview__author-name">
-              Michelle Appleton
+        <div>
+          <div class="article-preview__body">
+            <h3 class="article-preview__title">
+              Shift the overall look and feel by adding these
+              wonderful touches to furniture in your home
             </h3>
-            <p class="article-preview__date">28 Jun 2020</p>
+            <p class="article-preview__description">
+              Ever been in a room and felt like something was missing?
+              Perhaps it felt slightly bare and uninviting. I've got
+              some simple tips to help you make any room feel
+              complete.
+            </p>
           </div>
-          <button
-            class="article-preview__share-button"
-            aria-label="Share article"
-          >
-            <img
-              src="./images/icon-share.svg"
-              alt="Share icon"
-              class="article-preview__share-icon"
-            />
-          </button>
+          <div class="article-preview__footer">
+            <div class="article-preview__author">
+              <img
+                src="./images/avatar-michelle.jpg"
+                alt="Michelle Appleton"
+                class="img article-preview__avatar"
+              />
+              <div class="article-preview__author-info">
+                <h3 class="article-preview__author-name">
+                  Michelle Appleton
+                </h3>
+                <p class="article-preview__date">28 Jun 2020</p>
+              </div>
+            </div>
+            <button
+              class="article-preview__share-button"
+              aria-label="Share article"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="13"
+                class="article-preview__share-icon"
+              >
+                <path
+                  fill="#6E8098"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                  class="article-preview__share-icon-path"
+                />
+              </svg>
+            </button>
+            <div class="article-preview__share-popup">
+              <div class="article-preview__share-icons-container">
+                <p class="article-preview__share-label">share</p>
+                <ul class="article-preview__social-icons">
+                  <li>
+                    <a href="#" class="article-preview__social-icon">
+                      <i
+                        class="fa-brands fa-square-facebook fa-lg"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="sr-only">facebook</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="article-preview__social-icon">
+                      <i
+                        class="fa-brands fa-twitter fa-lg"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="sr-only">twitter</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="article-preview__social-icon">
+                      <i
+                        class="fa-brands fa-pinterest fa-lg"
+                        aria-hidden="true"
+                      ></i>
+                      <span class="sr-only">pinterest</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <button
+                class="article-preview__share-button--active"
+                aria-label="Share article"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="13"
+                  class="article-preview__share-icon"
+                >
+                  <path
+                    fill="#6E8098"
+                    d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                    class="article-preview__share-icon-path"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
       </article>
     </main>
